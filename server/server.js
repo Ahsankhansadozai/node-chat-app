@@ -37,7 +37,7 @@ io.on("connection", socket => {
       cerateAt: new Date().getTime()
     });
 
-    callback("this is from server");
+    callback();
   });
 
   socket.on("createLocationMessage", coords => {
