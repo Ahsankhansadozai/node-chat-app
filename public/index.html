@@ -5,11 +5,7 @@
       Chat App
     </title>
 
-<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-=======
-    <link rel="stylesheet" href="/css/style.css" />
->>>>>>> fdd41eaf618228ee9b59849c370cbda1447ab7ec
   </head>
   <body class="chat">
     <div class="chat__sidebar">
@@ -36,10 +32,44 @@
         <button id="send-location">Send location</button>
       </div>
     </div>
+    <script id="message-template" type="text/template">
+      <li class="message">
+        <div class="message__title">
+          <h4>
+            {{from}}
+            <span>{{createdAt}}</span>
+          </h4>
+        </div>
+        <div  class="message__body">
+          <p>{{text}}</p>
+
+        </div>
+
+      </li>
+    </script>
+
+    <script id="location-message-template" type="text/template">
+      <li class="message">
+        <div class="message__title">
+          <h4>
+            {{from}}
+            <span>{{createdAt}}</span>
+          </h4>
+        </div>
+        <div  class="message__body">
+          <p>
+            <a href="{{url}}" target="_blank">My location</a>
+          </p>
+
+        </div>
+
+      </li>
+    </script>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/libs/index.js"></script>
     <script src="js/index.js"></script>
     <script src="/js/libs/moment.js"></script>
+    <script src="/js/libs/mustache.js"></script>
   </body>
 </html>
